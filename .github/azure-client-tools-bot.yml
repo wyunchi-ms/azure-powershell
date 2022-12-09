@@ -5,7 +5,7 @@ pull_request:
       - "wyunchi-ms.azure-powershell - windows-powershell"
     result_path: "/PipelineResult/PipelineResult.json"
   comment:
-    level_keys:
+    group_by_keys:
       - "Module"
       - "PhaseName"
       - "Platform"
