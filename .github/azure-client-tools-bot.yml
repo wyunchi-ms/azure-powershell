@@ -6,6 +6,6 @@ pull_request:
     result_path: "/PipelineResult/PipelineResult.json"
   comment:
     group_by_keys:
-      - "PhaseName"
-      - "Module"
       - "Platform"
+      - "Module"
+      - "PhaseName"
