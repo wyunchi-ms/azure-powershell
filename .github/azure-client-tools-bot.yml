@@ -8,4 +8,4 @@ pull_request:
     group_by_keys:
       - "Module"
       - "PhaseName"
-      - "Platform"
+#       - "Platform"
