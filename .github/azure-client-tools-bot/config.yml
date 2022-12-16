@@ -8,7 +8,7 @@ pull_request:
         - "Module"
         - "PhaseName"
         - "Platform"
-      template_path: "template/comment1.handlebars"
+      template_path: "templates/comment1.handlebars"
       comment_title: "PowerShell-Core"
     - azure_pipeline:
         allow_list:
@@ -18,7 +18,7 @@ pull_request:
         - "Module"
         - "PhaseName"
         - "Platform"
-      template_path: "template/comment1.handlebars"
+      template_path: "templates/comment1.handlebars"
       comment_title: "Windows-PowerShell"
     - azure_pipeline:
         allow_list:
@@ -29,5 +29,5 @@ pull_request:
         - "Module"
         - "PhaseName"
         - "Platform"
-      template_path: "template/comment2.handlebars"
+      template_path: "templates/comment2.handlebars"
       comment_title: "comment2"
