@@ -1,0 +1,33 @@
+pull_request:
+  comment:
+    - azure_pipeline:
+        allow_list:
+          - "wyunchi-ms.azure-powershell - powershell-core"
+        result_path: "/PipelineResult/PipelineResult.json"
+      group_by_keys:
+        - "Module"
+        - "PhaseName"
+        - "Platform"
+      template_path: "template/comment1.handlebars"
+      comment_title: "PowerShell-Core"
+    - azure_pipeline:
+        allow_list:
+          - "wyunchi-ms.azure-powershell - windows-powershell"
+        result_path: "/PipelineResult/PipelineResult.json"
+      group_by_keys:
+        - "Module"
+        - "PhaseName"
+        - "Platform"
+      template_path: "template/comment1.handlebars"
+      comment_title: "Windows-PowerShell"
+    - azure_pipeline:
+        allow_list:
+          - "wyunchi-ms.azure-powershell - powershell-core"
+          - "wyunchi-ms.azure-powershell - windows-powershell"
+        result_path: "/PipelineResult/PipelineResult.json"
+      group_by_keys:
+        - "Module"
+        - "PhaseName"
+        - "Platform"
+      template_path: "template/comment2.handlebars"
+      comment_title: "comment2"
