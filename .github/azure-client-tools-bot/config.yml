@@ -26,8 +26,8 @@ pull_request:
           - "wyunchi-ms.azure-powershell - windows-powershell"
         result_path: "/PipelineResult/PipelineResult.json"
       group_by_keys:
-        - "Module"
         - "PhaseName"
+        - "Module"
         - "Platform"
       template_path: "templates/comment2.handlebars"
       comment_title: "comment2"
