@@ -407,7 +407,11 @@ namespace Microsoft.Azure.Commands.Network
                     .ForMember(
                         dest => dest.ExtendedLocation,
                         opt => opt.MapFrom(src =>
-                            (src.ExtendedLocation == null ? null : new PSExtendedLocation(src.ExtendedLocation.Name)))
+                            src.ExtendedLocation == null ? null : new PSExtendedLocation(src.ExtendedLocation.Name)))
+                    .ForMember(
+                        dest => dest.DdosSettings,
+                        opt => opt.MapFrom(src =>
+                            (src.DdosSettings ?? new MNM.DdosSettings()))
                     );
                 cfg.CreateMap<MNM.IpTag, CNM.PSPublicIpTag>();
                 cfg.CreateMap<MNM.PublicIPAddressSku, CNM.PSPublicIpAddressSku>();
@@ -1038,6 +1042,7 @@ namespace Microsoft.Azure.Commands.Network
                 cfg.CreateMap<CNM.PSApplicationGatewayPrivateLinkConfiguration, MNM.ApplicationGatewayPrivateLinkConfiguration>();
                 cfg.CreateMap<CNM.PSApplicationGatewayPrivateLinkIpConfiguration, MNM.ApplicationGatewayPrivateLinkIpConfiguration>();
                 cfg.CreateMap<CNM.PSApplicationGatewayPrivateEndpointConnection, MNM.ApplicationGatewayPrivateEndpointConnection>();
+                cfg.CreateMap<CNM.PSApplicationGatewayWafDynamicManifests, MNM.ApplicationGatewayWafDynamicManifestResult>();
 
                 // MNM to CNM
                 cfg.CreateMap<MNM.ApplicationGateway, CNM.PSApplicationGateway>();
@@ -1113,6 +1118,7 @@ namespace Microsoft.Azure.Commands.Network
                 cfg.CreateMap<MNM.ApplicationGatewayPrivateLinkConfiguration, CNM.PSApplicationGatewayPrivateLinkConfiguration>();
                 cfg.CreateMap<MNM.ApplicationGatewayPrivateLinkIpConfiguration, CNM.PSApplicationGatewayPrivateLinkIpConfiguration>();
                 cfg.CreateMap<MNM.ApplicationGatewayPrivateEndpointConnection, CNM.PSApplicationGatewayPrivateEndpointConnection>();
+                cfg.CreateMap<MNM.ApplicationGatewayWafDynamicManifestResult, CNM.PSApplicationGatewayWafDynamicManifests>();
 
                 // Application Security Groups
                 // CNM to MNM
