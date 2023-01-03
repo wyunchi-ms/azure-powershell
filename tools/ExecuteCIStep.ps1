@@ -183,6 +183,7 @@ If ($Build)
             {
                 $ModuleInfoList += @{
                     Module = "Az.$ModuleName";
+                    Status = "Running";
                     Content = "";
                 }
             }
