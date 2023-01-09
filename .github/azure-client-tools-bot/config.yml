@@ -10,6 +10,7 @@ pull_request:
         - "Platform"
       template_path: "templates/comment1.handlebars"
       comment_title: "PowerShell-Core"
+      init_comment: "Validation for PowerShell Core Starts. Thanks for your contribution!"
     - azure_pipeline:
         allow_list:
           - "wyunchi-ms.azure-powershell - windows-powershell"
@@ -20,6 +21,7 @@ pull_request:
         - "Platform"
       template_path: "templates/comment1.handlebars"
       comment_title: "Windows-PowerShell"
+      init_comment: "Validation for Windows PowerShell Starts. Thanks for your contribution!"
     - azure_pipeline:
         allow_list:
           - "wyunchi-ms.azure-powershell - powershell-core"
@@ -31,3 +33,4 @@ pull_request:
         - "Platform"
       template_path: "templates/comment2.handlebars"
       comment_title: "comment2"
+      init_comment: "Validation for PowerShell Core and Windows PowerShell Starts. Thanks for your contribution!"
