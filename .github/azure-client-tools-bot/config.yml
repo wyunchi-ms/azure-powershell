@@ -12,3 +12,4 @@ pull_request:
       template_path: "templates/PRComment.handlebars"
       comment_title: "PRComment"
       init_comment: "Validation for PowerShell Core and Windows PowerShell Starts. Thanks for your contribution!"
+      
